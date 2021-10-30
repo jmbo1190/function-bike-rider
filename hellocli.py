@@ -12,11 +12,11 @@ def callmarco(name):
            hellocli.py --help
     """
     result = marco(name)
+    print(f"Debug(callmarco): name: {name}, result: {result}")
     if result != "Polo":
         click.echo(click.style(f'{result}', bg='red'))
         sys.exit(1)  # Exit with status 1 - can be displayed in Linux with 'echo $?'
         # return True
-    #click.echo(result)
     click.echo(click.style(f'{result}', bg='green')) 
     # return True
     # normal exit with status 0
