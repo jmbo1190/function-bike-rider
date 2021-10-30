@@ -11,7 +11,7 @@ def test_not_marco():
 def test_not_marco_cli():
   runner = CliRunner()
   result = runner.invoke(callmarco, ['--name', 'Bob'])
-  assert result.exit_code == 0
+  assert result.exit_code == 1
   assert 'No!' in result.output
 
 def test_marco_cli():
