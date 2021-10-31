@@ -5,3 +5,4 @@ pytest-cov
 boto3
 ipython
 flask
+black
