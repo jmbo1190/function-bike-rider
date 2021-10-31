@@ -8,7 +8,9 @@ test-hello:
 test-labels:
 	python -m pytest -vv --cov=labels test_labels.py
 	
-test: test-hello test-labels
+test: test-hello
+	
+test-cloud9: test test-labels
 
 format:
 	black *.py
