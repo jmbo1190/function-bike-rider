@@ -4,11 +4,13 @@ import boto3
 
 
 @click.command()
-@click.option("--bucket", prompt="S3 Bucket", help="This is the S3 Bucket")
+@click.option("--bucket", 
+	prompt="Pass in the S3 Bucket (e.g. cloud-comp-found-function-bike-rider)", 
+	help="This is the S3 Bucket")
 @click.option(
     "--name",
-    prompt="this is the name of the image",
-    help="Pass in the name:  i.e. husky.png",
+    help="This is the name of the image",
+    prompt="Pass in the name (e.g. lion.jpg)",
 )
 def labels(bucket, name):
     """This takes an S3 bucket and a image name"""
