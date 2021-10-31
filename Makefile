@@ -2,8 +2,13 @@ install:
 	pip install --upgrade pip &&\
 		pip install -r requirements.txt
 
-test:
+test-hello:
 	python -m pytest -vv --cov=hello --cov=hellocli test_hello.py
+
+test-labels:
+	python -m pytest -vv --cov=labels test_labels.py
+	
+test: test-hello test-labels
 
 format:
 	black *.py
