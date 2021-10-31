@@ -10,5 +10,11 @@ format:
 	
 lint:
 	pylint --disable=R,C hello.py hellocli.py
+	
+copy-jpg:
+	aws s3 cp ../*.jpg s3://cloud-comp-found-function-bike-rider
+	
+copy-jpg-back:
+	aws s3 cp s3://cloud-comp-found-function-bike-rider .. --recursive --exclude "*" --include "*.jpg"
 
-all: install lint test
+all: install lint format test
