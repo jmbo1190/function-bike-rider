@@ -16,7 +16,7 @@ format:
 	black *.py
 	
 lint:
-	pylint --disable=R,C hello.py hellocli.py
+	pylint --disable=R,C *.py
 	
 copy-jpg:
 	aws s3 cp ../*.jpg s3://cloud-comp-found-function-bike-rider
