@@ -24,6 +24,7 @@ def lambda_handler(event, context):
     """This is a computer vision lambda handler"""
 
     print(f"This is my S3 event {event}")
+    print(f"This is my S3 context {context}")
     for record in event["Records"]:
         bucket = record["s3"]["bucket"]["name"]
         print(f"This is my bucket {bucket}")
